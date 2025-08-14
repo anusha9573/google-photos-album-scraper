@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>QR Face Recognition</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cormorant+Garamond:wght@400;700&display=swap');
+
+        /* Updated Earthy Wedding Palette */
+        :root {
+            --color-bg-light: #fdf5e6;
+            --color-text-dark: #3a2a22;
+            --color-accent-green: #90a955;
+            --color-accent-rust: #c8815a;
+            --color-shadow: rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--color-bg-light);
+            color: var(--color-text-dark);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Floating and Flowing Animated Background */
+        .container {
+            position: relative;
+            z-index: 2;
+            width: 95%;
+            max-width: 1000px;
+            padding: 3rem 4rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px var(--color-shadow);
+            backdrop-filter: blur(15px);
+            animation: float-in 1s ease-out forwards;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 10% 20%, var(--color-accent-green) 0%, transparent 60%),
+                radial-gradient(circle at 90% 80%, var(--color-accent-rust) 0%, transparent 60%);
+            background-size: 50% 50%;
+            animation: flow-background 30s infinite alternate ease-in-out;
+            opacity: 0.25;
+            z-index: 1;
+        }
+
+        @keyframes float-in {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes flow-background {
+            0% {
+                background-position: 0% 0%, 100% 100%;
+            }
+
+            100% {
+                background-position: 100% 100%, 0% 0%;
+            }
+        }
+
+        /* Typography */
+        .main-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--color-accent-rust);
+        }
+
+        .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            color: var(--color-text-dark);
+        }
+
+        /* Form and Inputs */
+        .form-card {
+            padding: 2rem;
+        }
+
+        .form-label {
+            font-weight: 400;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-dark);
+        }
+
+        .form-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 14px 20px;
+            margin: 10px 0;
+            border: 1px solid var(--color-accent-green);
+            border-radius: 50px;
+            font-size: 1.1rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--color-accent-rust);
+            box-shadow: 0 0 10px rgba(200, 129, 90, 0.4);
+        }
+
+        /* Button Styling */
+        .cta-button {
+            background-color: var(--color-accent-green);
+            color: var(--color-bg-light);
+            border: none;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(144, 169, 85, 0.4);
+            margin: 1rem 0.5rem;
+        }
+
+        .cta-button:hover {
+            background-color: var(--color-accent-rust);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(200, 129, 90, 0.5);
+        }
+
+        .cta-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Camera Container */
+        #camera-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            transform: scale(0.8) translateY(20px);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        #camera-container.is-visible {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+
+        .camera-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--color-accent-rust);
+            margin-bottom: 1.5rem;
+        }
+
+        .camera-video {
+            width: 100%;
+            max-width: 640px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px var(--color-shadow);
+            margin-bottom: 2rem;
+            background-color: #000;
+        }
+
+        .camera-controls {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .capture-button {
+            background-color: var(--color-accent-rust);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .capture-button:hover {
+            background-color: #b06a4a;
+            transform: scale(1.05);
+        }
+
+        .retake-button {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .retake-button:hover {
+            background-color: #5a6268;
+            transform: scale(1.05);
+        }
+
+        /* Selfie Display */
+        .selfie-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            transform: scale(0.8) translateY(20px);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        .selfie-container.is-visible {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+        }
+
+        .selfie-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--color-accent-rust);
+            margin-bottom: 1.5rem;
+        }
+
+        .selfie-image {
+            width: 100%;
+            max-width: 640px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px var(--color-shadow);
+            margin-bottom: 2rem;
+        }
+
+        /* Loading Animation */
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--color-accent-green);
+            border-top: 4px solid var(--color-accent-rust);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading-text {
+            font-size: 1.3rem;
+            color: var(--color-accent-green);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .loading-subtext {
+            font-size: 1rem;
+            color: var(--color-text-dark);
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: rgba(144, 169, 85, 0.2);
+            border-radius: 25px;
+            padding: 3px;
+            margin: 1rem 0;
+        }
+
+        .progress-bar {
+            height: 20px;
+            background: linear-gradient(90deg, var(--color-accent-green), var(--color-accent-rust));
+            border-radius: 25px;
+            width: 0%;
+            transition: width 0.3s ease;
+            animation: progress-animation 2s ease-in-out infinite;
+        }
+
+        @keyframes progress-animation {
+
+            0%,
+            100% {
+                width: 0%;
+            }
+
+            50% {
+                width: 100%;
+            }
+        }
+
+        .status-message {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--color-accent-green);
+        }
+
+        /* Hidden elements */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Error styling */
+        .error-message {
+            color: #e74c3c;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+            padding: 1rem;
+            background-color: rgba(231, 76, 60, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(231, 76, 60, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="main-title">Welcome to the Event</h1>
+        <p class="subtitle">Please enter your details to proceed.</p>
+
+        <!-- User Details Form -->
+        <div id="details-form" class="form-card">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" name="name" required class="form-input"><br><br>
+            <label for="phone" class="form-label">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required class="form-input"><br><br>
+            <button type="button" id="start-camera-btn" class="cta-button">Start Camera</button>
+        </div>
+
+        <!-- Camera Container -->
+        <div id="camera-container" class="camera-card">
+            <h2 class="camera-title">Take Your Selfie</h2>
+            <video id="video" width="640" height="480" autoplay muted class="camera-video"></video>
+            <canvas id="canvas" width="640" height="480" class="hidden"></canvas>
+
+            <div class="camera-controls">
+                <button id="capture-btn" class="capture-button">📸 Capture Selfie</button>
+                <button id="retake-btn" class="retake-button hidden">🔄 Retake</button>
+            </div>
+
+            <div id="camera-status" class="status-message">Camera is ready. Click "Capture Selfie" when you're ready!
+            </div>
+        </div>
+
+        <!-- Selfie Display and Loading Container -->
+        <div id="selfie-container" class="selfie-container">
+            <h2 class="selfie-title">Your Selfie</h2>
+            <img id="selfie-image" class="selfie-image" alt="Your selfie">
+
+            <div class="camera-controls">
+                <button id="submit-btn" class="cta-button">🚀 Submit & Find Photos</button>
+                <button id="retake-selfie-btn" class="retake-button">🔄 Take New Selfie</button>
+            </div>
+
+            <div id="loading-container" class="loading-container hidden">
+                <div class="loading-spinner"></div>
+                <div class="loading-text">Finding your photos...</div>
+                <div class="loading-subtext">Searching through our photo collection</div>
+
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+
+                <div class="loading-subtext">This may take a few moments</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentStream = null;
+        let capturedImageData = null;
+        let userName = '';
+        let userPhone = '';
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('DOM loaded, setting up event listeners...');
+
+            // Start camera button click
+            document.getElementById('start-camera-btn').addEventListener('click', function () {
+                console.log('Start camera button clicked');
+                startCameraFlow();
+            });
+
+            // Capture selfie button
+            document.getElementById('capture-btn').addEventListener('click', function () {
+                console.log('Capture button clicked');
+                captureSelfie();
+            });
+
+            // Submit button
+            document.getElementById('submit-btn').addEventListener('click', function () {
+                console.log('Submit button clicked');
+                submitSelfie();
+            });
+
+            // Retake selfie button
+            document.getElementById('retake-selfie-btn').addEventListener('click', function () {
+                console.log('Retake button clicked');
+                retakeSelfie();
+            });
+
+            // Retake button (from camera)
+            document.getElementById('retake-btn').addEventListener('click', function () {
+                console.log('Retake from camera clicked');
+                retakeSelfie();
+            });
+        });
+
+        // Start camera flow function
+        function startCameraFlow() {
+            console.log('Starting camera flow...');
+
+            // Validate inputs
+            userName = document.getElementById('name').value.trim();
+            userPhone = document.getElementById('phone').value.trim();
+
+            if (!userName || !userPhone) {
+                alert('Please enter both name and phone number!');
+                return;
+            }
+
+            console.log('User data:', { name: userName, phone: userPhone });
+
+            // Hide the form
+            document.getElementById('details-form').style.display = 'none';
+            console.log('Form hidden');
+
+            // Show camera container
+            const cameraContainer = document.getElementById('camera-container');
+            cameraContainer.style.display = 'flex';
+            setTimeout(() => cameraContainer.classList.add('is-visible'), 10);
+            console.log('Camera container shown');
+
+            // Start camera
+            startCamera();
+        }
+
+        // Start camera function
+        function startCamera() {
+            console.log('Starting camera...');
+
+            navigator.mediaDevices.getUserMedia({
+                video: {
+                    width: { ideal: 640 },
+                    height: { ideal: 480 },
+                    facingMode: 'user' // Use front camera
+                }
+            })
+                .then(function (stream) {
+                    console.log('Camera stream obtained');
+                    currentStream = stream;
+                    const video = document.getElementById('video');
+                    video.srcObject = stream;
+                    video.onloadedmetadata = function () {
+                        video.play();
+                        document.getElementById('camera-status').innerText = 'Camera is ready. Click "Capture Selfie" when you\'re ready!';
+                        console.log('Video playing');
+                    };
+                })
+                .catch(function (err) {
+                    console.error('Camera error:', err);
+                    document.getElementById('camera-status').innerText = 'Could not access the camera. Please grant permission.';
+                });
+        }
+
+        // Capture selfie function
+        function captureSelfie() {
+            console.log('Capturing selfie...');
+
+            const video = document.getElementById('video');
+            const canvas = document.getElementById('canvas');
+            const context = canvas.getContext('2d');
+
+            // Draw video frame to canvas
+            context.drawImage(video, 0, 0, 640, 480);
+
+            // Get image data
+            capturedImageData = canvas.toDataURL('image/jpeg');
+            console.log('Selfie captured, size:', capturedImageData.length);
+
+            // Stop camera
+            if (currentStream) {
+                currentStream.getTracks().forEach(track => track.stop());
+                currentStream = null;
+                console.log('Camera stopped');
+            }
+
+            // Hide camera container
+            const cameraContainer = document.getElementById('camera-container');
+            cameraContainer.style.display = 'none';
+            cameraContainer.classList.remove('is-visible');
+
+            // Show selfie
+            showSelfie();
+        }
+
+        // Show captured selfie
+        function showSelfie() {
+            console.log('Showing selfie...');
+
+            const selfieImage = document.getElementById('selfie-image');
+            selfieImage.src = capturedImageData;
+
+            // Show selfie container
+            const selfieContainer = document.getElementById('selfie-container');
+            selfieContainer.style.display = 'flex';
+            setTimeout(() => selfieContainer.classList.add('is-visible'), 10);
+            console.log('Selfie container shown');
+        }
+
+        // Submit selfie function
+        function submitSelfie() {
+            console.log('Submitting selfie...');
+
+            if (!capturedImageData) {
+                alert('Please capture a selfie first!');
+                return;
+            }
+
+            // Hide submit button and show loading
+            document.getElementById('submit-btn').classList.add('hidden');
+            document.getElementById('retake-selfie-btn').classList.add('hidden');
+            document.getElementById('loading-container').classList.remove('hidden');
+
+            // Process selfie
+            processSelfie(capturedImageData, userName, userPhone);
+        }
+
+        // Retake selfie function
+        function retakeSelfie() {
+            console.log('Retaking selfie...');
+
+            // Hide selfie container
+            const selfieContainer = document.getElementById('selfie-container');
+            selfieContainer.style.display = 'none';
+            selfieContainer.classList.remove('is-visible');
+
+            // Reset captured image
+            capturedImageData = null;
+
+            // Show camera container again
+            const cameraContainer = document.getElementById('camera-container');
+            cameraContainer.style.display = 'flex';
+            setTimeout(() => cameraContainer.classList.add('is-visible'), 10);
+
+            // Start camera again
+            startCamera();
+        }
+
+
+        // Process selfie with backend
+        function processSelfie(imageData, name, phone) {
+            console.log('Processing selfie with backend...');
+
+            fetch('/scan', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, phone, selfie: imageData })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Backend response:', data);
+                    if (data.error) {
+                        showError(data.error);
+                    } else {
+                        // Success - redirect to results with user info
+                        const queryParams = new URLSearchParams({
+                            user: data.user,
+                            images_found: data.images_found,
+                            status: data.status
+                        });
+                        window.location.href = `/results?${queryParams.toString()}`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    showError('An error occurred. Please try again.');
+                });
+        }
+
+
+        // Show error function
+        function showError(errorMessage) {
+            console.log('Showing error:', errorMessage);
+
+            const loadingContainer = document.getElementById('loading-container');
+            loadingContainer.innerHTML = `
+                <div class="error-message">
+                    ❌ ${errorMessage}
+                </div>
+                <button onclick="retakeSelfie()" class="cta-button" style="margin-top: 1rem;">
+                    Try Again
+                </button>
+            `;
+        }
+    </script>
+</body>
+
+</html>
