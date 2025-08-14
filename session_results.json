@@ -1,0 +1,15 @@
+{
+  "user": "Altman",
+  "phone": "040291786457",
+  "matching_files": [
+    {
+      "file_id": "1rpBQBE0f5E8m6kO7ss5kX9eRj9SmgUPM",
+      "file_name": "dark",
+      "similarity_score": 0.7419999837875366,
+      "faces_in_image": 1,
+      "confidence": "High",
+      "match_type": "exact"
+    }
+  ],
+  "total_matches": 1
+}

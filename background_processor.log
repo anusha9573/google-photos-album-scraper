@@ -1,0 +1,157 @@
+2025-08-14 17:56:19,740 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-08-14 17:56:19,972 - INFO - Starting initial processing of all files...
+2025-08-14 17:56:20,708 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 17:56:20,709 - WARNING - No files found for initial processing
+2025-08-14 17:56:20,709 - INFO - Starting processing cycle...
+2025-08-14 17:56:20,710 - INFO - Background processing started
+2025-08-14 17:56:21,051 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 17:56:21,051 - WARNING - No files found in Drive folder
+2025-08-14 17:56:49,791 - INFO - Shutting down...
+2025-08-14 17:57:42,395 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-08-14 17:57:42,400 - INFO - Starting initial processing of all files...
+2025-08-14 17:57:43,066 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 17:57:43,067 - WARNING - No files found for initial processing
+2025-08-14 17:57:43,068 - INFO - Starting processing cycle...
+2025-08-14 17:57:43,068 - INFO - Background processing started
+2025-08-14 17:57:43,422 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 17:57:43,423 - WARNING - No files found in Drive folder
+2025-08-14 18:02:43,425 - INFO - Starting processing cycle...
+2025-08-14 18:02:43,823 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 18:02:43,823 - WARNING - No files found in Drive folder
+2025-08-14 18:07:43,835 - INFO - Starting processing cycle...
+2025-08-14 18:07:44,300 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 18:07:44,300 - WARNING - No files found in Drive folder
+2025-08-14 18:12:42,928 - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-08-14 18:12:42,933 - INFO - Starting initial processing of all files...
+2025-08-14 18:12:44,212 - INFO - Initial processing file: img3.jpg
+2025-08-14 18:12:44,215 - ERROR - Failed to download image 1rIStlKsZ-DafTJanf1pPATZngsUy3Ywn: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:44,309 - INFO - Starting processing cycle...
+2025-08-14 18:12:44,675 - INFO - Initial processing file: img2.webp
+2025-08-14 18:12:44,678 - ERROR - Failed to download image 1_HPMelr0Wfrnbd5YYVdu-BOiU2bmkaPk: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:44,712 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 18:12:44,712 - WARNING - No files found in Drive folder
+2025-08-14 18:12:45,137 - INFO - Initial processing file: img1.jpg
+2025-08-14 18:12:45,140 - ERROR - Failed to download image 1xZEjTmDlrQqrD-59NJ4e2u2zf1wwdMc1: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:45,648 - INFO - Initial processing file: Copy of Scanned_20250705-2144-05.jpg
+2025-08-14 18:12:45,651 - ERROR - Failed to download image 15xK2m6bUVXvBdkvGRPBCkoLuH_hwXMBw: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:46,115 - INFO - Initial processing file: Copy of Scanned_20250705-2144-02.jpg
+2025-08-14 18:12:46,118 - ERROR - Failed to download image 1QznY-xe896t7zQxHjRcUUfSa7yXrUurn: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:46,636 - INFO - Initial processing file: Copy of Scanned_20250705-2144-04.jpg
+2025-08-14 18:12:46,638 - ERROR - Failed to download image 12jPAKfvl2mf2CvQLdzWL3yVIc88-HCLc: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:47,094 - INFO - Initial processing file: Copy of Scanned_20250705-2144-98.jpg
+2025-08-14 18:12:47,098 - ERROR - Failed to download image 1AkDOqeq61a5hNdpKQjWkgbvR9LfrHU0B: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:47,548 - INFO - Initial processing file: Copy of Scanned_20250705-2144-99.jpg
+2025-08-14 18:12:47,550 - ERROR - Failed to download image 1jXzfOVxUpHrfUOiDry8xx3IK8hGNBVgf: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:48,100 - INFO - Initial processing file: Copy of Scanned_20250705-2144-95.jpg
+2025-08-14 18:12:48,103 - ERROR - Failed to download image 1AvQ72ReD4t2kXc5xFx3HNJWDTfH6VO_f: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:48,567 - INFO - Initial processing file: Copy of Scanned_20250705-2144-97.jpg
+2025-08-14 18:12:48,569 - ERROR - Failed to download image 1G-BVu2iTWh6-wD8YOpiGKW9cmhOMV6DE: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:49,055 - INFO - Initial processing file: Copy of Scanned_20250705-2144-100.jpg
+2025-08-14 18:12:49,057 - ERROR - Failed to download image 1TpmhL40nhjrUAjU5mQHvgxPnqqxJBlno: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:49,059 - INFO - Cache saved successfully
+2025-08-14 18:12:49,059 - INFO - Initial processing completed. Processed 0 files
+2025-08-14 18:12:49,059 - INFO - Starting processing cycle...
+2025-08-14 18:12:49,059 - INFO - Background processing started
+2025-08-14 18:12:49,542 - INFO - New file detected: img3.jpg
+2025-08-14 18:12:49,542 - INFO - New file detected: img2.webp
+2025-08-14 18:12:49,542 - INFO - New file detected: img1.jpg
+2025-08-14 18:12:49,543 - INFO - New file detected: Copy of Scanned_20250705-2144-05.jpg
+2025-08-14 18:12:49,543 - INFO - New file detected: Copy of Scanned_20250705-2144-02.jpg
+2025-08-14 18:12:49,543 - INFO - New file detected: Copy of Scanned_20250705-2144-04.jpg
+2025-08-14 18:12:49,543 - INFO - New file detected: Copy of Scanned_20250705-2144-98.jpg
+2025-08-14 18:12:49,543 - INFO - New file detected: Copy of Scanned_20250705-2144-99.jpg
+2025-08-14 18:12:49,543 - INFO - New file detected: Copy of Scanned_20250705-2144-95.jpg
+2025-08-14 18:12:49,543 - INFO - New file detected: Copy of Scanned_20250705-2144-97.jpg
+2025-08-14 18:12:49,544 - INFO - New file detected: Copy of Scanned_20250705-2144-100.jpg
+2025-08-14 18:12:50,022 - INFO - Processing new file: img3.jpg
+2025-08-14 18:12:50,024 - ERROR - Failed to download image 1rIStlKsZ-DafTJanf1pPATZngsUy3Ywn: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:50,489 - INFO - Processing new file: img2.webp
+2025-08-14 18:12:50,491 - ERROR - Failed to download image 1_HPMelr0Wfrnbd5YYVdu-BOiU2bmkaPk: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:50,974 - INFO - Processing new file: img1.jpg
+2025-08-14 18:12:50,977 - ERROR - Failed to download image 1xZEjTmDlrQqrD-59NJ4e2u2zf1wwdMc1: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:51,415 - INFO - Processing new file: Copy of Scanned_20250705-2144-05.jpg
+2025-08-14 18:12:51,417 - ERROR - Failed to download image 15xK2m6bUVXvBdkvGRPBCkoLuH_hwXMBw: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:51,927 - INFO - Processing new file: Copy of Scanned_20250705-2144-02.jpg
+2025-08-14 18:12:51,930 - ERROR - Failed to download image 1QznY-xe896t7zQxHjRcUUfSa7yXrUurn: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:52,392 - INFO - Processing new file: Copy of Scanned_20250705-2144-04.jpg
+2025-08-14 18:12:52,395 - ERROR - Failed to download image 12jPAKfvl2mf2CvQLdzWL3yVIc88-HCLc: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:52,838 - INFO - Processing new file: Copy of Scanned_20250705-2144-98.jpg
+2025-08-14 18:12:52,840 - ERROR - Failed to download image 1AkDOqeq61a5hNdpKQjWkgbvR9LfrHU0B: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:53,325 - INFO - Processing new file: Copy of Scanned_20250705-2144-99.jpg
+2025-08-14 18:12:53,328 - ERROR - Failed to download image 1jXzfOVxUpHrfUOiDry8xx3IK8hGNBVgf: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:53,782 - INFO - Processing new file: Copy of Scanned_20250705-2144-95.jpg
+2025-08-14 18:12:53,786 - ERROR - Failed to download image 1AvQ72ReD4t2kXc5xFx3HNJWDTfH6VO_f: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:54,269 - INFO - Processing new file: Copy of Scanned_20250705-2144-97.jpg
+2025-08-14 18:12:54,272 - ERROR - Failed to download image 1G-BVu2iTWh6-wD8YOpiGKW9cmhOMV6DE: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:54,717 - INFO - Processing new file: Copy of Scanned_20250705-2144-100.jpg
+2025-08-14 18:12:54,720 - ERROR - Failed to download image 1TpmhL40nhjrUAjU5mQHvgxPnqqxJBlno: 'Resource' object has no attribute '_credentials'
+2025-08-14 18:12:54,720 - INFO - Processed 0 new files
+2025-08-14 18:12:54,720 - INFO - Cache saved successfully
+2025-08-14 18:12:54,721 - INFO - Processing cycle completed. Total encodings: 0
+2025-08-14 18:15:02,183 - INFO - Shutting down...
+2025-08-14 18:17:44,720 - INFO - Starting processing cycle...
+2025-08-14 18:17:45,143 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 18:17:45,144 - WARNING - No files found in Drive folder
+2025-08-14 18:22:45,149 - INFO - Starting processing cycle...
+2025-08-14 18:22:45,635 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 18:22:45,636 - WARNING - No files found in Drive folder
+2025-08-14 18:27:45,647 - INFO - Starting processing cycle...
+2025-08-14 18:27:46,089 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 18:27:46,090 - WARNING - No files found in Drive folder
+2025-08-14 18:32:46,103 - INFO - Starting processing cycle...
+2025-08-14 18:32:46,557 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 18:32:46,557 - WARNING - No files found in Drive folder
+2025-08-14 18:37:46,562 - INFO - Starting processing cycle...
+2025-08-14 18:37:47,092 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 18:37:47,093 - WARNING - No files found in Drive folder
+2025-08-14 18:42:47,107 - INFO - Starting processing cycle...
+2025-08-14 18:42:47,516 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 18:42:47,516 - WARNING - No files found in Drive folder
+2025-08-14 18:47:47,525 - INFO - Starting processing cycle...
+2025-08-14 18:47:47,938 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 18:47:47,939 - WARNING - No files found in Drive folder
+2025-08-14 18:52:47,941 - INFO - Starting processing cycle...
+2025-08-14 18:52:48,344 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 18:52:48,345 - WARNING - No files found in Drive folder
+2025-08-14 18:57:48,358 - INFO - Starting processing cycle...
+2025-08-14 18:57:48,989 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 18:57:48,989 - WARNING - No files found in Drive folder
+2025-08-14 19:02:48,999 - INFO - Starting processing cycle...
+2025-08-14 19:02:49,407 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 19:02:49,407 - WARNING - No files found in Drive folder
+2025-08-14 19:07:49,412 - INFO - Starting processing cycle...
+2025-08-14 19:07:49,836 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 19:07:49,836 - WARNING - No files found in Drive folder
+2025-08-14 19:12:49,846 - INFO - Starting processing cycle...
+2025-08-14 19:12:50,284 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 19:12:50,284 - WARNING - No files found in Drive folder
+2025-08-14 19:17:50,289 - INFO - Starting processing cycle...
+2025-08-14 19:17:50,698 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 19:17:50,698 - WARNING - No files found in Drive folder
+2025-08-14 19:22:50,706 - INFO - Starting processing cycle...
+2025-08-14 19:22:51,121 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 19:22:51,121 - WARNING - No files found in Drive folder
+2025-08-14 19:27:51,133 - INFO - Starting processing cycle...
+2025-08-14 19:27:51,542 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 19:27:51,543 - WARNING - No files found in Drive folder
+2025-08-14 19:32:51,555 - INFO - Starting processing cycle...
+2025-08-14 19:32:51,961 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 19:32:51,961 - WARNING - No files found in Drive folder
+2025-08-14 19:37:51,964 - INFO - Starting processing cycle...
+2025-08-14 19:37:52,375 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 19:37:52,375 - WARNING - No files found in Drive folder
+2025-08-14 19:42:52,380 - INFO - Starting processing cycle...
+2025-08-14 19:42:52,891 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 19:42:52,891 - WARNING - No files found in Drive folder
+2025-08-14 19:47:52,904 - INFO - Starting processing cycle...
+2025-08-14 19:47:53,333 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 19:47:53,334 - WARNING - No files found in Drive folder
+2025-08-14 19:52:53,341 - INFO - Starting processing cycle...
+2025-08-14 19:52:53,953 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 19:52:53,953 - WARNING - No files found in Drive folder
+2025-08-14 19:57:53,967 - INFO - Starting processing cycle...
+2025-08-14 19:57:54,633 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 19:57:54,633 - WARNING - No files found in Drive folder
+2025-08-14 20:02:54,635 - INFO - Starting processing cycle...
+2025-08-14 20:02:55,078 - ERROR - Failed to get Drive files: <HttpError 404 when requesting https://www.googleapis.com/drive/v3/files?q=%27YOUR_GOOGLE_DRIVE_FOLDER_ID%27+in+parents+and+mimeType+contains+%27image%2F%27&fields=nextPageToken%2C+files%28id%2C+name%2C+modifiedTime%2C+size%29&alt=json returned "File not found: .". Details: "[{'message': 'File not found: .', 'domain': 'global', 'reason': 'notFound', 'location': 'fileId', 'locationType': 'parameter'}]">
+2025-08-14 20:02:55,079 - WARNING - No files found in Drive folder
