@@ -1,6 +1,15 @@
 # NuptialPhotoSearch
 
-A web application that helps users find their photos from a Google Drive folder by scanning their face from a selfie. Built with Flask, DeepFace, and Google Drive API.
+Multiple photographers are capturing photos of the same event, and they're all uploading their images to a single shared folder on a platform like Google Drive. Attendees want to see and download their own pictures right away, but they have to manually sift through thousands of photos to find themselves.
+
+Our project solves this real-world problem. By using facial recognition, it can automatically tag and sort photos, making it incredibly easy for every wedding guest to instantly access and download all the images they appear in. It's a simple solution to a frustrating issue, allowing everyone to get their photos fast and enjoy the memories without the hassle.
+
+
+
+
+
+
+
 
 ---
 
