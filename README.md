@@ -1,4 +1,4 @@
-# Wedding Face Recognition App
+# NuptialPhotoSearch
 
 A web application that helps users find their photos from a Google Drive folder by scanning their face from a selfie. Built with Flask, DeepFace, and Google Drive API.
 
