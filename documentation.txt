@@ -1,0 +1,92 @@
+Wedding Face Recognition App
+A web application that allows users to find their photos from a Google Drive folder by scanning their face from a selfie.
+Built with Flask, DeepFace, and Google Drive API.
+
+1. Project Structure
+wed/
+├── app.py                  # Main Flask application
+├── requirements.txt        # Python dependencies
+├── credentials.json        # Google Drive API credentials (not tracked in git)
+├── cache/                  # Stores face encodings and metadata
+│   ├── face_encodings_cache.pkl
+│   ├── file_metadata_cache.json
+│   └── cache_timestamp.txt
+├── templates/
+│   ├── index.html          # Upload/selfie page
+│   └── results.html        # Results display page
+└── session_results.json    # Temporary session storage
+
+2. Setup Instructions
+A. Clone the Repository
+
+git clone https://github.com/anusha9573/google-photos-album-scraper.git
+cd wed
+
+B. Create and Activate a Python Virtual Environment
+python -m venv venv
+venv\Scripts\activate    # On Windows
+# Or
+source venv/bin/activate # On Mac/Linux
+
+
+C. Install Dependencies
+
+pip install -r requirements.txt
+
+
+D. Add Google Drive Credentials
+Place your credentials.json (Google service account) in the project root.
+Share your Google Drive folder with the service account email.
+
+3. Running the Application
+
+python app.py
+
+The app will start at http://localhost:5000
+On first run, the app will:
+Create the cache directory if it does not exist.
+Download and process all images from the Google Drive folder.
+Create these cache files:
+cache/face_encodings_cache.pkl
+cache/file_metadata_cache.json
+cache/cache_timestamp.txt
+If cache files are missing or empty, they will be regenerated automatically.
+
+4. How the App Works
+User uploads a selfie via the web interface.
+The app extracts face encodings using DeepFace.
+It compares the selfie encoding to all stored face encodings from Drive images.
+Matching images are displayed on the results page.
+Users can download their matched photos.
+
+5. Key Features
+Multi-face detection: Finds all faces in group photos.
+Accurate matching: Uses DeepFace and cosine similarity.
+Automatic cache updates: Background thread refreshes cache every 5 minutes.
+Efficient caching: Only new/changed images are reprocessed.
+User-friendly UI: Modern, responsive design.
+
+6. Files Created During Operation
+cache/face_encodings_cache.pkl: Stores all face encodings for images.
+cache/file_metadata_cache.json: Stores metadata for each image.
+cache/cache_timestamp.txt: Last cache update time.
+session_results.json: Stores results of the latest user scan.
+user_data/user_YYYY-MM-DD_HH-MM-SS.json: Stores each user's scan info.
+If the cache is empty or deleted, these files will be recreated automatically on next run.
+
+7. Troubleshooting
+New images not detected: Wait for 5 minutes or restart the app to force cache update.
+No matches found: Ensure your selfie is clear and matches faces in Drive photos.
+Google Drive issues: Check folder permissions and service account access.
+Check cache status: Visit /cache-status route for debugging info.
+
+
+8. Optimization Notes
+Uses incremental caching to avoid reprocessing unchanged images.
+Multi-backend face detection for higher accuracy.
+Background thread ensures up-to-date results without blocking user requests.
+9. Deployment
+Can be deployed locally or on cloud platforms like Render.
+For cloud deployment, ensure credentials.json is securely provided and persistent storage is available for cache files.
+10. Contact & Support
+For issues or feature requests, please contact the project maintainer or open a GitHub issue.
